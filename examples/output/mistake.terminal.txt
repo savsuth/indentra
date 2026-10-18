@@ -1,0 +1,13 @@
+Paragraph: 342 characters
+
+B3, fine-tuned Llama 3.2 3B (1.16 s, adapter digest 5d33f539ad3b394c)
+  Fixed interest rate      5.25%              from "5.25%"
+  Commitment fee           1.5%               from "1.50%"
+
+TF-IDF baseline (6.3 ms)
+  Principal amount         $500,000,000       from "$500,000,000"
+  Fixed interest rate      5.25%              from "5.25%"
+  Interest margin          1.5%               from "1.50%"
+  Commitment fee           0.2%               from "0.20%"
+
+Comparison on this paragraph. Both: Fixed interest rate 5.25%. Only B3: Commitment fee 1.5%. Only TF-IDF: Principal amount $500,000,000, Interest margin 1.5%, Commitment fee 0.2%.

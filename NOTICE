@@ -1,0 +1,20 @@
+Built with Llama
+
+Indentra is the name of this application. The model it runs (B3) is a fine-tuned Llama 3.2 3B; any distributed copy of that
+model must carry a name beginning with "Llama", as stated below.
+
+Llama 3.2 is licensed under the Llama 3.2 Community License, Copyright (c) Meta Platforms, Inc. All Rights Reserved.
+
+Any fine-tuned adapter or model from this project is a derivative of Llama 3.2 and is distributed under the Llama 3.2
+Community License and its Acceptable Use Policy (https://www.llama.com/llama3_2/use-policy). A copy of the license must
+accompany any distribution, and a distributed model's name must begin with "Llama".
+
+Weights were obtained from the ungated redistribution unsloth/Llama-3.2-3B-Instruct. Its two safetensors shards have the
+same byte sizes as meta-llama/Llama-3.2-3B-Instruct; Meta's repository hides the weight hashes, so byte-level identity
+was not verified.
+
+Data: filings retrieved from SEC EDGAR (https://www.sec.gov). Information presented on sec.gov is public information
+and may be copied or further distributed without the SEC's permission. This project is not affiliated with or endorsed
+by the SEC.
+
+This project extracts terms stated in filings. It is not financial advice.

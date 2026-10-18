@@ -1,0 +1,30 @@
+model: models/Llama-3.2-3B-Instruct-mlx-q4
+train: true
+fine_tune_type: lora
+optimizer: adamw
+data: data/mlx/full-neg33-cand
+seed: 0
+num_layers: 16
+batch_size: 1
+grad_accumulation_steps: 16
+iters: 7600
+val_batches: 40
+learning_rate: 0.0002
+lr_schedule:
+  name: cosine_decay
+  arguments:
+  - 0.0002
+  - 461
+  - 2.0e-05
+  warmup: 14
+steps_per_report: 20
+steps_per_eval: 1520
+save_every: 1000000000
+adapter_path: adapters/full-neg33-cand
+max_seq_length: 1536
+grad_checkpoint: true
+mask_prompt: true
+lora_parameters:
+  rank: 16
+  scale: 2.0
+  dropout: 0.05

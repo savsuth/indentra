@@ -1,0 +1,9 @@
+{
+  "data": "data/mlx/full-neg33-cand",
+  "name": "full-neg33-cand",
+  "epochs": 1.0,
+  "rank": 16,
+  "seed": 0,
+  "max_iters": null,
+  "batch_size": 1
+}

@@ -1,0 +1,102 @@
+{
+  "gladstone-notes": {
+    "expected_facts": [
+      [
+        "face_amount",
+        "115000000"
+      ],
+      [
+        "stated_rate",
+        "7.125"
+      ]
+    ],
+    "expected_error": null,
+    "source": "Real 8-K paragraph (Gladstone Investment, filed 2026-02-18) from the original 8-K development set, used to develop and select B3.",
+    "provenance": "Dataset label from data/eightk/test.jsonl (label_source claude-draft: drafted by Claude, not reviewed by a person); version 2 is identical."
+  },
+  "synthetic-notes-revolver": {
+    "expected_facts": [
+      [
+        "commitment_fee",
+        "0.2"
+      ],
+      [
+        "face_amount",
+        "500000000"
+      ],
+      [
+        "facility_size",
+        "750000000"
+      ],
+      [
+        "spread",
+        "1.5"
+      ],
+      [
+        "stated_rate",
+        "5.25"
+      ]
+    ],
+    "expected_error": null,
+    "source": "Synthetic paragraph written for these examples.",
+    "provenance": "AI-authored expectation: written by Claude from docs/LABELING.md for this synthetic paragraph; not reviewed by a person."
+  },
+  "synthetic-term-loan": {
+    "expected_facts": [
+      [
+        "effective_rate",
+        "6.1"
+      ],
+      [
+        "face_amount",
+        "300000000"
+      ],
+      [
+        "spread",
+        "1.75"
+      ]
+    ],
+    "expected_error": null,
+    "source": "Synthetic paragraph written for these examples.",
+    "provenance": "AI-authored expectation: written by Claude from docs/LABELING.md for this synthetic paragraph; not reviewed by a person."
+  },
+  "world-acceptance-redemption": {
+    "expected_facts": [
+      [
+        "face_amount",
+        "168326000"
+      ],
+      [
+        "stated_rate",
+        "7"
+      ]
+    ],
+    "expected_error": null,
+    "source": "Real 8-K paragraph (World Acceptance, filed 2025-07-24) from the fresh 8-K test set; B3 was evaluated on it, so its result here is not new evidence.",
+    "provenance": "Label version 2 from data/eightk_fresh/v2/test.jsonl: Claude-drafted, Codex-checked; the face_amount was added by a consistency sweep under policy P1, chosen by Codex under the owner's delegation. The frozen version 1 label has only stated_rate 7."
+  },
+  "synthetic-no-figures": {
+    "expected_facts": [],
+    "expected_error": null,
+    "source": "Synthetic paragraph with no dollar or percentage figures.",
+    "provenance": "AI-authored expectation: written by Claude from docs/LABELING.md for this synthetic paragraph; not reviewed by a person."
+  },
+  "invalid-empty": {
+    "expected_facts": null,
+    "expected_error": "input",
+    "source": "Whitespace only.",
+    "provenance": "Input check: must be rejected, not extracted."
+  },
+  "invalid-two-paragraphs": {
+    "expected_facts": null,
+    "expected_error": "input",
+    "source": "Two paragraphs separated by a blank line.",
+    "provenance": "Input check: must be rejected, not merged."
+  },
+  "invalid-too-long": {
+    "expected_facts": null,
+    "expected_error": "input",
+    "source": "3,599 characters, over the 3,000 limit.",
+    "provenance": "Input check: must be rejected, not truncated."
+  }
+}

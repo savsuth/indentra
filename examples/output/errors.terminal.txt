@@ -1,0 +1,32 @@
+$ printf "   
+" | .venv/bin/python -m scripts.indentra extract
+error: Paste a paragraph first.
+exit 2
+
+$ .venv/bin/python -m scripts.indentra extract examples/missing.txt
+error: cannot read examples/missing.txt: No such file or directory
+exit 2
+
+$ printf "The Company issued \$200 million of 6%% notes.
+
+It also amended its facility.
+" | .venv/bin/python -m scripts.indentra extract
+error: The input contains more than one paragraph (separated by a blank line). Indentra extracts one paragraph at a time: put each paragraph in its own file, or use batch mode.
+exit 2
+
+$ python3 -c "print(\"x\" * 3001)" | .venv/bin/python -m scripts.indentra extract
+error: This text has 3,001 characters. Indentra takes one paragraph of up to 3,000 characters, the longest the evaluation used. Paste a single paragraph; nothing is cut off automatically.
+exit 2
+
+$ printf "{\"id\": \"a\"}
+{not json}
+" > /tmp/indentra-bad.jsonl && .venv/bin/python -m scripts.indentra batch /tmp/indentra-bad.jsonl --output /tmp/indentra-out.jsonl
+error: /tmp/indentra-bad.jsonl is not a valid batch file:
+  line 1: needs a string "text"
+  line 2: not valid JSON
+exit 2
+
+$ (from a folder without the model files) .venv/bin/python -m scripts.indentra extract examples/works.txt
+Loading B3...
+error: B3 cannot load; missing: models/Llama-3.2-3B-Instruct-mlx-q4/config.json, models/Llama-3.2-3B-Instruct-mlx-q4/model.safetensors, models/Llama-3.2-3B-Instruct-mlx-q4/tokenizer.json, models/Llama-3.2-3B-Instruct-mlx-q4/tokenizer_config.json, models/Llama-3.2-3B-Instruct-mlx-q4/chat_template.jinja, adapters/full-neg33-cand/adapter_config.json, adapters/full-neg33-cand/adapters.safetensors, runs/ft-full-neg33-cand-mlx-eightk_fresh/config.json
+exit 1

@@ -1,0 +1,13 @@
+Loading B3...
+B3 ready in 3.4 s
+Loading TF-IDF...
+TF-IDF ready in 0.7 s
+[1/8] gladstone-notes: extracted: 2 facts (1.38 s)
+[2/8] synthetic-notes-revolver: extracted: 2 facts (1.02 s)
+[3/8] synthetic-term-loan: extracted: 2 facts (0.83 s)
+[4/8] world-acceptance-redemption: extracted: 1 fact (0.89 s)
+[5/8] synthetic-no-figures: extracted: 0 facts (0.00 s)
+[6/8] invalid-empty: rejected: Paste a paragraph first.
+[7/8] invalid-two-paragraphs: rejected: The input contains more than one paragraph (separated by a blank line). Indentra extracts one paragraph at a time: put each paragraph in its own file, or use batch mode.
+[8/8] invalid-too-long: rejected: This text has 3,599 characters. Indentra takes one paragraph of up to 3,000 characters, the longest the evaluation used. Paste a single paragraph; nothing is cut off automatically.
+8 records: 5 extracted, 3 rejected. Output: examples/output/batch.jsonl

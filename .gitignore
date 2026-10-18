@@ -1,0 +1,33 @@
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+models/
+tools/
+*.download.log
+
+# Rebuildable by scripts (EDGAR downloads, filtered splits, training files).
+data/cache/
+data/interim/
+data/processed/
+data/mlx/
+data/feasibility/
+# Kept: data/eightk/ and data/audit/ hold hand-made labels that no script can regenerate.
+
+# LoRA weights are large; their train_config.yaml, run.json and train.log stay tracked.
+adapters/*/*.safetensors
+runs/logs/
+.DS_Store
+
+# Credentials and local secrets are never tracked.
+.env
+.env.*
+*.pem
+*.key
+kaggle.json
+access_token
+
+# Generated model artifact, rebuilt deterministically by `.venv/bin/python -m scripts.run_baselines --split val`;
+# its manifest.json (configuration, data hash, model digest) stays tracked.
+artifacts/*/model.pkl

@@ -1,0 +1,56 @@
+{
+  "paragraph": "On February 18, 2026, in connection with a previously announced public offering, Gladstone Investment Corporation (the \u201cCompany\u201d) and UMB Bank, National Association, as trustee (the \u201cTrustee\u201d), entered into a Seventh Supplemental Indenture (the \u201cSeventh Supplemental Indenture\u201d) to the Indenture, dated May 22, 2020, between the Company and the Trustee (together with the Seventh Supplemental Indenture, the \u201cIndenture\u201d). The Seventh Supplemental Indenture relates to Company\u2019s issuance, offer and sale of up to $115.0 million aggregate principal amount of its 7.125% Notes due 2031 (the \u201cNotes\u201d).",
+  "results": [
+    {
+      "engine": "b3",
+      "text": "On February 18, 2026, in connection with a previously announced public offering, Gladstone Investment Corporation (the \u201cCompany\u201d) and UMB Bank, National Association, as trustee (the \u201cTrustee\u201d), entered into a Seventh Supplemental Indenture (the \u201cSeventh Supplemental Indenture\u201d) to the Indenture, dated May 22, 2020, between the Company and the Trustee (together with the Seventh Supplemental Indenture, the \u201cIndenture\u201d). The Seventh Supplemental Indenture relates to Company\u2019s issuance, offer and sale of up to $115.0 million aggregate principal amount of its 7.125% Notes due 2031 (the \u201cNotes\u201d).",
+      "facts": [
+        {
+          "field": "face_amount",
+          "value": "115000000",
+          "label": "Principal amount",
+          "display": "$115,000,000",
+          "spans": [
+            {
+              "start": 512,
+              "end": 526,
+              "text": "$115.0 million"
+            }
+          ],
+          "other_occurrences": 0
+        },
+        {
+          "field": "stated_rate",
+          "value": "7.125",
+          "label": "Fixed interest rate",
+          "display": "7.125%",
+          "spans": [
+            {
+              "start": 561,
+              "end": 567,
+              "text": "7.125%"
+            }
+          ],
+          "other_occurrences": 0
+        }
+      ],
+      "seconds": 1.195,
+      "valid": true,
+      "model_called": true,
+      "truncated": false,
+      "note": null,
+      "raw": "{\"facts\": [[1, \"face_amount\"], [2, \"stated_rate\"]]}",
+      "model": {
+        "name": "B3",
+        "description": "Llama 3.2 3B Instruct, 4-bit MLX, with the B3 LoRA adapter (labels regex candidates)",
+        "base_model": "models/Llama-3.2-3B-Instruct-mlx-q4",
+        "adapter": "adapters/full-neg33-cand",
+        "adapter_weights_sha256": "aeae578135f657a9ba3684dbf9a8db0924874a3071579ff79b683e0d6d517860",
+        "model_digest": "a12e350262c4abf8",
+        "adapter_digest": "5d33f539ad3b394c",
+        "matches_evaluation_run": "runs/ft-full-neg33-cand-mlx-eightk_fresh/config.json",
+        "decoding": "greedy, up to 256 new tokens"
+      }
+    }
+  ]
+}

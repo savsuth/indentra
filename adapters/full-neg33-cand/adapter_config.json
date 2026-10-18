@@ -1,0 +1,50 @@
+{
+    "adapter_path": "adapters/full-neg33-cand",
+    "batch_size": 1,
+    "clear_cache_threshold": 0,
+    "config": "adapters/full-neg33-cand/train_config.yaml",
+    "data": "data/mlx/full-neg33-cand",
+    "fine_tune_type": "lora",
+    "grad_accumulation_steps": 16,
+    "grad_checkpoint": true,
+    "iters": 7600,
+    "learning_rate": 0.0002,
+    "lora_parameters": {
+        "rank": 16,
+        "scale": 2.0,
+        "dropout": 0.05
+    },
+    "lr_schedule": {
+        "name": "cosine_decay",
+        "arguments": [
+            0.0002,
+            461,
+            2e-05
+        ],
+        "warmup": 14
+    },
+    "mask_prompt": true,
+    "max_seq_length": 1536,
+    "model": "models/Llama-3.2-3B-Instruct-mlx-q4",
+    "num_layers": 16,
+    "optimizer": "adamw",
+    "optimizer_config": {
+        "adam": {},
+        "adamw": {},
+        "muon": {},
+        "sgd": {},
+        "adafactor": {}
+    },
+    "project_name": null,
+    "report_to": null,
+    "resume_adapter_file": null,
+    "save_every": 1000000000,
+    "seed": 0,
+    "steps_per_eval": 1520,
+    "steps_per_report": 20,
+    "test": false,
+    "test_batches": 500,
+    "train": true,
+    "trust_remote_code": false,
+    "val_batches": 40
+}

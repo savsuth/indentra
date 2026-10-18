@@ -1,0 +1,44 @@
+{
+  "target_policy": "every gold field of the candidate's unit with an equal value, weight 1/k; none otherwise (baselines.training_targets)",
+  "model_digest": "cfcf78ace3a8d13c8cdf9e17906f963d76e2ef61f102042bcb5ca678dbe6c907",
+  "train_sha256": "bb809171409f79f4f864d08fd5849fae453671193cca11b2294c64e8f05c3cff",
+  "seed": 0,
+  "train_split": "data/processed/train.jsonl",
+  "train_records": 12029,
+  "train_candidates": 39208,
+  "train_rows": 39347,
+  "candidates_with_several_fields": 139,
+  "label_rows": {
+    "commitment_fee": 718,
+    "effective_rate": 681,
+    "face_amount": 2464,
+    "facility_size": 2583,
+    "none": 25858,
+    "spread": 3321,
+    "stated_rate": 3722
+  },
+  "vectorizer": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "sublinear_tf": true
+  },
+  "classifier": {
+    "type": "LogisticRegression",
+    "C": 4.0,
+    "max_iter": 2000,
+    "random_state": 0
+  },
+  "context_words": {
+    "left": 12,
+    "right": 6
+  },
+  "versions": {
+    "scikit-learn": "1.9.1",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1"
+  },
+  "model_pkl_sha256": "0b6c50d7691dc9da71170c695558f6cd4973e2fcb8bc0449ca50ce9b9e54baf9"
+}

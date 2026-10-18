@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "indentra"
+version = "0.1.0"
+description = "Indentra: structured debt-term extraction from corporate filings, with a QLoRA-fine-tuned Llama 3.2 3B evaluated against classic baselines."
+readme = "README.md"
+requires-python = ">=3.13"
+# Core library: EDGAR client, inline-XBRL parser, splits, metrics, baselines, scoring.
+dependencies = [
+    "lxml==6.1.3",
+    "scikit-learn==1.9.1",
+    "PyYAML==6.0.3",
+]
+
+[project.optional-dependencies]
+# Training and inference on Apple silicon (MLX is macOS-only). transformers comes with mlx-lm.
+mlx = ["mlx==0.32.3", "mlx-lm==0.32.0", "transformers==5.19.0"]
+dev = ["pytest==9.1.1", "ruff==0.17.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 140
+target-version = "py313"
+src = ["src", "scripts", "tests"]
+extend-exclude = ["tools", "models", "data"]
+
+[tool.ruff.lint]
+select = ["F", "E9", "B", "UP"]

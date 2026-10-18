@@ -1,0 +1,34 @@
+{
+  "engine": "mlx",
+  "model": "models/Llama-3.2-3B-Instruct-mlx-q4",
+  "adapter": "adapters/full-neg33-cand",
+  "lora": null,
+  "split": "eightk_fresh",
+  "shots": 0,
+  "schema": false,
+  "prompt": "candidates",
+  "subset": null,
+  "max_tokens": 256,
+  "limit": null,
+  "seed": 0,
+  "name": "ft-full-neg33-cand-mlx-eightk_fresh",
+  "examples": 450,
+  "model_calls": 450,
+  "truncated_outputs": 0,
+  "prompt_tokens_mean": 253.21777777777777,
+  "elapsed_seconds": 452.1,
+  "seconds_per_example": 1.005,
+  "timing": {
+    "prompt_tps_mean": 299.6496307730372,
+    "generation_tps_mean": 102.57906677819156,
+    "peak_memory_gb": 4.921306012
+  },
+  "model_digest": "a12e350262c4abf8",
+  "adapter_digest": "5d33f539ad3b394c",
+  "lora_digest": null,
+  "versions": {
+    "mlx-lm": "0.32.0",
+    "transformers": "5.19.0",
+    "llama.cpp": "0.6.0 (brew)"
+  }
+}
